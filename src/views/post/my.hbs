@@ -1,0 +1,42 @@
+<main>
+  <section id="my-posts">
+    <h1>My Posts</h1>
+
+    <div class="my-container">
+      {{#each posts}}
+        <div class="my-card">
+          <div class="card-header">
+            <img
+              src="{{imageUrl}}"
+              alt="water_fall"
+            />
+          </div>
+          <div class="card-body">
+            <span class="tag tag-teal">Keyword: {{keyword}}</span>
+            <h4>
+              Title: {{title}}
+            </h4>
+            <div class="user">
+              <img
+                src="https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png"
+                alt="vote"
+              />
+              <div class="user-info">
+                <h5>Author: {{author.firstName}}  {{author.lastName}}</h5>
+                <small>Rating of votes: {{totalRating}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{else}}
+        <div class="no-posts">
+          <div class="no-posts-img">
+            <img src="/static/img/bear.jpg" alt="image_nature_3" />
+          </div>
+          <p class="no-offer">There are no own posts yet...</p>
+        </div>
+      {{/each}}
+    </div>
+  </section>
+
+</main>
